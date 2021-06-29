@@ -15,7 +15,7 @@ export default () => ({
       secret:
         process.env.AUTH_JWT_SECRET ||
         'this is the auth jwt secret that you have to change',
-      expiresIn: '1d',
+      expiresIn: 86400,
     },
   },
 });
