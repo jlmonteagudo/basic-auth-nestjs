@@ -1,24 +1,21 @@
 import { Controller, Post, Body, HttpCode } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import { AuthCredentialsDto } from './dto/auth-credentials.dto';
 import { AccessToken } from './jwt/access-token.interface';
-import { ConfigService } from '@nestjs/config';
+import { AuthRegisterDto } from './dto/auth-register.dto';
+import { AuthLoginDto } from './dto/auth-login.dto';
 
 @Controller('auth')
 export class AuthController {
-  constructor(
-    private readonly authService: AuthService,
-    private configService: ConfigService
-  ) {}
+  constructor(private readonly authService: AuthService) {}
 
-  @Post('/signup')
-  signUp(@Body() authCredentialsDto: AuthCredentialsDto): Promise<void> {
-    return this.authService.signUp(authCredentialsDto);
+  @Post('register')
+  register(@Body() authRegisterDto: AuthRegisterDto): Promise<void> {
+    return this.authService.register(authRegisterDto);
   }
 
-  @Post('/signin')
+  @Post('login')
   @HttpCode(200)
-  signIn(@Body() authCredentialsDto: AuthCredentialsDto): Promise<AccessToken> {
-    return this.authService.signIn(authCredentialsDto);
+  login(@Body() authLoginDto: AuthLoginDto): Promise<AccessToken> {
+    return this.authService.login(authLoginDto);
   }
 }
