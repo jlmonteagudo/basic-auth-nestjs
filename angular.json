@@ -129,14 +129,7 @@
             "outputPath": "dist/apps/api",
             "main": "apps/api/src/main.ts",
             "tsConfig": "apps/api/tsconfig.app.json",
-            "assets": [
-              "apps/api/src/assets",
-              {
-                "glob": "**/*.yaml",
-                "input": "apps/api/src/config",
-                "output": "."
-              }
-            ]
+            "assets": ["apps/api/src/assets"]
           },
           "configurations": {
             "production": {
