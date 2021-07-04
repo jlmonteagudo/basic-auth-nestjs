@@ -36,15 +36,16 @@ export class AuthController {
   }
 
   @Post('logout')
+  @HttpCode(200)
   async logout(@Res() response: Response): Promise<void> {
     const cookie = await this.authService.getLogoutCookie();
     response.setHeader('Set-Cookie', cookie);
-    response.sendStatus(200);
+    response.send();
   }
 
   @Get()
   @UseGuards(JwtAuthenticationGuard)
   getPrivateData() {
-    return 'THIS IS PRIVATE DATA';
+    return { message: 'THIS IS PRIVATE DATA' };
   }
 }

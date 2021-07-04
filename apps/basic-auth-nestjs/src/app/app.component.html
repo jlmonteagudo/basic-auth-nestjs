@@ -1,8 +1,8 @@
-<div style="text-align: center">
-  <h1>Welcome to basic-auth-nestjs!</h1>
-  <img
-    width="450"
-    src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
-  />
+<div class="menu">
+  <a routerLink="/auth">LOGIN</a>
+  <a routerLink="/customer">DATOS PRIVADOS</a>
+  <a routerLink="" (click)="logout()">LOGOUT</a>
+  <a>REGISTER</a>
 </div>
-<div>Message: {{ hello$ | async | json }}</div>
+
+<router-outlet></router-outlet>
