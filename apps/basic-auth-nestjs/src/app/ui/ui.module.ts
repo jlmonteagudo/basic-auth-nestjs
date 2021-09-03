@@ -8,6 +8,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 const MATERIAL_MODULES = [
   MatCardModule,
@@ -18,6 +19,7 @@ const MATERIAL_MODULES = [
   MatRadioModule,
   MatToolbarModule,
   MatIconModule,
+  MatSnackBarModule,
 ];
 
 @NgModule({
