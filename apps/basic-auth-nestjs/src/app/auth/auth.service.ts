@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { AuthLoginDto } from './dto/auth-login.dto';
+import { AuthLoginDto } from './dtos/auth-login.dto';
+import { AuthRegisterDto } from './dtos/auth-register.dto';
 
 @Injectable({
   providedIn: 'root',
@@ -18,5 +19,9 @@ export class AuthService {
 
   logout(): Observable<void> {
     return this.httpClient.post<void>(`${this.BASE_URL}/logout`, null);
+  }
+
+  register(register: AuthRegisterDto): Observable<any> {
+    return this.httpClient.post<void>(`${this.BASE_URL}/register`, register);
   }
 }
