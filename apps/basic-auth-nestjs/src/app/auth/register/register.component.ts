@@ -3,7 +3,7 @@ import { FormBuilder } from '@angular/forms';
 import { AuthService } from '../auth.service';
 
 @Component({
-  selector: 'basic-auth-nestjs-register',
+  selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
 })

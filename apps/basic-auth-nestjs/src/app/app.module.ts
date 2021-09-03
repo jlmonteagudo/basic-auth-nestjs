@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Routes, RouterModule } from '@angular/router';
 import { CustomerComponent } from './customer/customer.component';
-import { LayoutModule } from './layout/layout.module';
+import { LayoutModule } from './ui/layout/layout.module';
 
 const routes: Routes = [
   {

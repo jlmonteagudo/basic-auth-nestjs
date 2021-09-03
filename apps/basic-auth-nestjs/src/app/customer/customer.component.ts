@@ -4,7 +4,7 @@ import { EMPTY, Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
 @Component({
-  selector: 'basic-auth-nestjs-customer',
+  selector: 'app-customer',
   templateUrl: './customer.component.html',
   styleUrls: ['./customer.component.css'],
 })

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { AuthService } from './auth/auth.service';
 
 @Component({
-  selector: 'basic-auth-nestjs-root',
+  selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
