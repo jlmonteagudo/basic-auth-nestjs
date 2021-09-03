@@ -1,10 +1,4 @@
 <app-toolbar></app-toolbar>
-
-<div class="menu">
-  <a routerLink="/auth">LOGIN</a>
-  <a routerLink="/customer">DATOS PRIVADOS</a>
-  <a routerLink="" (click)="logout()">LOGOUT</a>
-  <a routerLink="/auth/register">REGISTER</a>
+<div class="content">
+  <router-outlet></router-outlet>
 </div>
-
-<router-outlet></router-outlet>

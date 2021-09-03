@@ -6,9 +6,10 @@ import { LoginComponent } from './login/login.component';
 import { UiModule } from '../ui/ui.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
+import { AuthMenuComponent } from './auth-menu/auth-menu.component';
 
 @NgModule({
-  declarations: [LoginComponent, RegisterComponent],
+  declarations: [LoginComponent, RegisterComponent, AuthMenuComponent],
   imports: [
     CommonModule,
     HttpClientModule,
@@ -17,5 +18,6 @@ import { RegisterComponent } from './register/register.component';
     ReactiveFormsModule,
     UiModule,
   ],
+  exports: [AuthMenuComponent],
 })
 export class AuthModule {}
